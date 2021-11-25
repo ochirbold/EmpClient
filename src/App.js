@@ -40,6 +40,14 @@ function App() {
       }
     );
   };
+  const getEmployeesId = () => {
+    Axios.get("https://mysql-ws-heroku.herokuapp.com/employees/:id").then(
+      (response) => {
+        // console.log(response);
+        setEmployeeList(response.data);
+      }
+    );
+  };
 
   return (
     <div className="App">
